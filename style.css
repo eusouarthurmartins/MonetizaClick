@@ -885,3 +885,55 @@ img[src*="mockup-monetizaclick-dashboard"] {
   margin: 0 auto;
   display: block;
 }
+
+
+/* ========================================
+   MOBILE: PROJETOS EM LISTA VERTICAL
+   ======================================== */
+@media (max-width: 768px) {
+
+  /* libera overflow */
+  #projetos {
+    overflow: visible;
+  }
+
+  .carousel-wrapper {
+    overflow: visible;
+    padding-bottom: 0;
+  }
+
+  /* DESLIGA animação do carrossel */
+  .projects-carousel-track {
+    animation: none;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    transform: none !important;
+  }
+
+  /* cards viram 100% largura */
+  .project-card {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* remove hover exagerado no mobile */
+  .project-card:hover {
+    transform: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+}
+
+
+/* ========================================
+   MOBILE: esconder cards duplicados
+   ======================================== */
+@media (max-width: 768px) {
+
+  /* mostra apenas os 6 primeiros cards */
+  .projects-carousel-track .project-card:nth-child(n+7) {
+    display: none;
+  }
+
+}
